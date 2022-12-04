@@ -43,8 +43,14 @@
                 return Mass;
             }
 
+            // Ввод данных и вывод результатов
 
-
+            Console.WriteLine("Введите размер массива: ");
+            string[] FirstMass = OriginalMass(int.Parse(Console.ReadLine()));
+            Console.WriteLine($"Первоначальный массив: [|{String.Join("| |", FirstMass)}|]");
+            Console.WriteLine();
+            string[] SortedMass = GetNewMass(FirstMass);
+            Console.WriteLine($"Итоговый массив: [|{String.Join("| |", SortedMass)}|]");
 
         }
     }
