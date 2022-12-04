@@ -22,6 +22,27 @@
                 return Mass;
             }
 
+            
+            // Создаем новый массив из элементов, удовлетворяющих условию задачи
+
+            string[] GetNewMass(string[] array)
+            {
+                string[] Mass = Array.Empty<string>();
+                int j = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+
+                    if (array[i].Length < 4)
+                    {
+                        Array.Resize(ref Mass, Mass.Length + 1);
+                        Mass[j] = array[i];
+                        j++;
+                    }
+
+                }
+                return Mass;
+            }
+
 
 
 
